@@ -1,17 +1,19 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/03/31 20:21:41 by asoler            #+#    #+#             */
+/*   Updated: 2022/03/31 20:27:27 by asoler           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int	ft_x(char *s)
+int	ft_count_if(char **tab, int (*f)(char*))
 {
-	if (s[0] == 'a')
-		return (1);
-	else
-		return (0);
-}
-
-int	ft_count_if(char **tab, int(*f)(char*))
-{
-	int i;
-	int count;
+	int	i;
+	int	count;
 
 	i = 0;
 	count = 0;
@@ -22,11 +24,4 @@ int	ft_count_if(char **tab, int(*f)(char*))
 		i++;
 	}
 	return (count);
-}
-
-int	main()
-{
-	char *arr[5] = {"ahsjk", "aslasf", "aslkkjfd", "jklsan", 0};
-
-	printf("\n%d\n", ft_count_if(arr, ft_x));
 }

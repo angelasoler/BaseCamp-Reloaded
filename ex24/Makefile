@@ -20,7 +20,6 @@ re: fclean
 
 fclean: clean
 	rm libft.a
-	# rm a.out
 
 clean:
 	rm -rf *.o
