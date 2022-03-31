@@ -21,9 +21,10 @@ int	main()
 {
 	int x = 5;
 	int tab[5] = {0, 1, 2, 3, 4};
-	int i =0;
+	int i = 0;
 
 	ft_foreach(tab, 5, duplicate);
+	printf("\n\n%ld\n\n\n", sizeof tab / sizeof tab[0]);
 	while (i < x)
 	{
 		printf("%d\n", tab[i]);
