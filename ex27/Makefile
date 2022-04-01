@@ -1,25 +1,20 @@
-NAME=libft.a
+NAME=ft_display_file
 
 CC=gcc
 
 CC_FLAGS=-Wall -Werror -Wextra
 
-OBJ=ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
-
 all: $(NAME)
 	make clean
 
-$(NAME): $(OBJ)
-	ar -rc $(NAME) $(OBJ)
-
-%.o: ./srcs/%.c ./includes/ft.h
-	$(CC) -c $(CC_FLAGS) $< -o $@
+$(NAME): main.c
+	$(CC) $(CC_FLAGS) main.c
 
 re: fclean
 	make all
 
 fclean: clean
-	rm libft.a
+	rm ft_display_file
 
 clean:
 	rm -rf *.o
