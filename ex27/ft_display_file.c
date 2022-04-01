@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_display_file.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asoler <asoler@student.42sp.org.br>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/01 04:17:23 by asoler            #+#    #+#             */
-/*   Updated: 2022/04/01 04:24:42 by asoler           ###   ########.fr       */
+/*   Created: 2022/04/01 04:29:02 by asoler            #+#    #+#             */
+/*   Updated: 2022/04/01 04:29:04 by asoler           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <fcntl.h>
 
-void	ft_display_file(char *s);
-
-int	main(int argc, char *argv[])
+void	ft_display_file(char *s)
 {
-	if (argc == 1)
-		write(2, "File name missied.\n", 20);
-	else if (argc > 2)
-		write(2, "Too many arguments.\n", 21);
+	int		fd;
+	char	*s1[1];
+
+	fd = open(s, O_RDONLY);
+	if (fd == -1)
+		return ;
 	else
-	{
-		ft_display_file(argv[1]);
-	}
+		while (read(fd, s1, 1))
+			write(1, s1, 1);
+	close(fd);
 }
