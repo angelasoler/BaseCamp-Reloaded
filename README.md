@@ -1,5 +1,7 @@
 <h1 align="center">
-  # Basecamp-Reloaded-Last
+  Basecamp-Reloaded-Last
+  
+<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl263316l006809l0mxrfwgrw/stats?cursusId=60&coalitionId=undefined" alt="asoler's 42 stats" /></a>
 </h1>
 
 <p align="center">
